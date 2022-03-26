@@ -1,2 +1,2 @@
-# logica-python
-exx da facul
+# Logica Python
+Exercício da faculdade
