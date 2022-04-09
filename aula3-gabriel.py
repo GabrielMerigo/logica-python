@@ -1,12 +1,12 @@
 '''
-1 - Ler dois números e imprimir as variáveis na mesma ordem que foram digitadas:
+# 1 - Ler dois números e imprimir as variáveis na mesma ordem que foram digitadas:
 numero1 = input('Numero 1: ')
 numero2 = input('Numero 2: ')
 print('Numero 1 é: ' + numero1 + 'Número 2 é: ' + numero2)
 '''
 
 '''
-2 -
+# 2 -
 vA = input('Escreva o primeiro número: ')
 print('O valor digitado foi: ' + vA)
 vB = input('Escreva o segundo número: ')
@@ -18,7 +18,7 @@ print('vA agora é: ', vA, 'vB agora é: ', vB)
 '''
 
 '''
-3 - 
+# 3 - 
 num1 = int(input('digite um número: '))
 num2 = int(input('digite outro número: '))
 soma = num1 + num2
@@ -26,16 +26,16 @@ print('a soma desses números é: ', soma)
 '''
 
 '''
-4 - 
+# 4 - 
 num1 = int(input('Digite o primeiro número: '))
 num2 = int(input('Digite o segundo número: '))
 num3 = int(input('Digite o terceiro número: '))
 result = (num1 + num2 + num3) / 3
 print('a média aritmética dos 3 valores é: ', result)
 '''
-'''
-5 - 
 
+'''
+# 5 - 
 numeros = [10, 10, 20, 15, 20]
 numerosLength = len(numeros)
 soma = 0
@@ -46,7 +46,7 @@ print(f"Soma={soma} Media={media}")
 '''
 
 '''
-6 - 
+# 6 - 
 num1 = int(input('digite um número: '))
 num2 = int(input('digite outro número: '))
 if(num1 > num2):
@@ -56,16 +56,16 @@ elif (num2 > num1):
 else:
     print('Os dois são iguais.')
 '''
-
+'''
 # 7 -
 arr = [2, 65, 3, 90, 80, 24]
 print(arr)
 arr.sort()
 print(arr)
-
+'''
 
 '''
-8 - 
+# 8 -
 a = 100
 b = 10
 c = 2
@@ -74,7 +74,7 @@ print(soma)
 '''
 
 '''
-9 -
+# 9 -
 x = 10
 y = 3
 z = 10
@@ -83,7 +83,7 @@ print(soma)
 '''
 
 '''
-10 - 
+# 10 - 
 peso1 = 5
 peso2 = 7
 nota1 = int(input('Digite sua primeira nota: '))
@@ -95,16 +95,15 @@ print('Media ponderada', media)
 '''
 
 '''
-11 -
+# 11 -
 fahrenheit = 54
 soma = ((fahrenheit - 32) * 5) / 2
 print(soma)
 '''
-
 '''
-12 - 
+# 12 -
 distancia = int(input('Distância em KM: '))
-kmPorLitro = int(input('Quantos km por litro: '))
+kmPorLitro = float(input('Quantos km por litro: '))
 preco = float(input('Qual é o preço da gasolina: '))
 
 def calculaLitros(distancia, kmPorLitro):
@@ -117,9 +116,8 @@ message = f"Com a quantidade de {str(distancia)} percorrida você irá gastar {s
 print(message)
 '''
 
-
 '''
-13 - 
+# 13 - 
 num1 = int(input('Digite um número: '))
 
 if(num1 <= 10):
@@ -129,3 +127,28 @@ elif (num1 > 10 and num1 <= 100):
 else:
     print('O seu número é maior que 100')
 '''
+
+'''
+Faça um algoritmo que leia, para 8 pessoas, seus nomes e idades. 
+Após, mostre o nome e a idade da pessoa mais nova.
+'''
+
+
+class Person:
+  def __init__(self, name, age):
+    self.name = name
+    self.age = age
+
+newestPerson = Person('', 2000)
+vzs = ''
+
+while vzs != 'N':
+    currentPerson = Person(input('Digite o nome da pessoa: '), int(input('Digite a idade da pessoa: ')))
+
+    if(currentPerson.age < newestPerson.age):
+        newValuePerson = currentPerson
+    else:
+        newValuePerson = newestPerson
+    vzs = input('quer continuar? caso sim [Digite Y] - caso não [ Digite N] ')
+
+print(f"a pessoa mais nova é o(a) {newValuePerson.name} com a idade de {newValuePerson.age} anos")
