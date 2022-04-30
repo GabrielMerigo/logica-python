@@ -56,6 +56,7 @@ elif (num2 > num1):
 else:
     print('Os dois são iguais.')
 '''
+
 '''
 # 7 -
 arr = [2, 65, 3, 90, 80, 24]
@@ -133,7 +134,7 @@ Faça um algoritmo que leia, para 8 pessoas, seus nomes e idades.
 Após, mostre o nome e a idade da pessoa mais nova.
 '''
 
-
+'''
 class Person:
   def __init__(self, name, age):
     self.name = name
@@ -152,3 +153,12 @@ while vzs != 'N':
     vzs = input('quer continuar? caso sim [Digite Y] - caso não [ Digite N] ')
 
 print(f"a pessoa mais nova é o(a) {newValuePerson.name} com a idade de {newValuePerson.age} anos")
+'''
+linhas = int(input('Quantas linhas?'))
+colunas = int(input('Quantas colunas?'))
+
+for i in range(linhas):
+    if(i == 0 or i == linhas - 1):
+        print('#'*(colunas + 2))
+    else:
+        print('#' + "."*colunas + '#')
