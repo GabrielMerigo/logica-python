@@ -153,7 +153,7 @@ while vzs != 'N':
     vzs = input('quer continuar? caso sim [Digite Y] - caso não [ Digite N] ')
 
 print(f"a pessoa mais nova é o(a) {newValuePerson.name} com a idade de {newValuePerson.age} anos")
-'''
+
 linhas = int(input('Quantas linhas?'))
 colunas = int(input('Quantas colunas?'))
 
@@ -162,3 +162,20 @@ for i in range(linhas):
         print('#'*(colunas + 2))
     else:
         print('#' + "."*colunas + '#')
+'''
+frase = input('Digite uma frase: ')
+countVogal = 0
+
+def isVogal(vogal):
+    vogais = ['a', 'e', 'i', 'o', 'u']
+    return vogal in vogais
+
+for caractere in frase:
+    caractereLower = caractere.lower()
+
+    if(isVogal(caractereLower)):
+        countVogal = countVogal + 1
+        
+print(f"A quantidade de caracteres da sua frase é {len(frase)}. E a quantidade de vogais é {countVogal}")
+        
+ 
