@@ -177,5 +177,36 @@ for caractere in frase:
         countVogal = countVogal + 1
         
 print(f"A quantidade de caracteres da sua frase é {len(frase)}. E a quantidade de vogais é {countVogal}")
-        
+
+'''
+Faça um algoritmo que leia vários números e identifique se o número é par, impar ou negativo.
+Se for par adicione em uma lista chamada lista_pares, se for impar, adicione em lista_impares e 
+se for negativo adicione na litsa chamada lista_negativos
+'''
+
+
+lista_pares = []
+lista_impares = []
+lista_negativos = []
+
+while True:
+    print("Digite 'sair' para finalizar...")
+    numero = input('>>> ')
+    if numero == "sair" : break
+
+    try:
+        numero = int(input('>>> '))
+    except:
+        print('Ops... você digitou algo que não é um número...')
+        continue
+
+    if numero >= 0:
+        if numero % 2 == 0:
+           lista_pares.append(numero)  
+        else:
+           lista_impares.append(numero)  
+    else: 
+       lista_negativos.append(numero) 
+
+print(lista_pares, lista_impares, lista_negativos)
  
