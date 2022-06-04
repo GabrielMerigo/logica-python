@@ -272,4 +272,69 @@ while concatArrays().__len__() <= 41:
 
 calculaMediaERetornaMensagem(qntdAlunos)
 
- 
+ '''
+Competências:
+- Atividade é individual. :)
+- Saber interpretar o que foi solicitado;
+- Desenvolver uma solução viável para o problema proposto;
+- Utilizar os comandos de forma adequada para a solução;
+
+Tarefa:
+-------
+Perguntar a 4 alunos a resposta de 10 questoes de uma prova de múltipla escolha.
+Comparar essas respostas com o gabarito da prova.
+Calcular o total de acertos de cada aluno.
+
+No final informar:
+Aluno(s) com Maior acerto(s)
+Aluno(s) com Menor acerto(s)
+A média das notas da turma
+
+
+Aceitar como respostas apenas A,B,C,D,E.
+
+'''
+
+lista_gabarito = ["A","B","C","D","E","E","D","C","B","A"]
+
+tiposRespostas = ['A', 'B', 'C', 'D', 'E']
+alunoUmQuestoes = []
+alunoDoisQuestoes = []
+alunoTresQuestoes = []
+alunoQuatroResp = []
+
+def fazerPerguntasParaAluno(alunoResp, numeroAluno):
+    while alunoResp.__len__() <= 1:
+        resp = input(f'Aluno {numeroAluno}, responda essa questão: ')
+        try:
+            if (resp.__len__() > 1): raise ValueError('Você não pode digitar mais de um caractere.')
+            if (not resp.upper() in tiposRespostas or resp.isdigit()): raise ValueError('Você só pode digitar caracteres como A, B, C, D e E')
+            alunoResp.append(resp.upper())
+        except ValueError as ex:
+            print(ex.args)
+            continue
+    return alunoResp
+
+
+def verificarRespostas(aluno):
+    for i in range(aluno.__len__()):
+        if(lista_gabarito[i] == aluno[i]):
+            respostaAluno = respostaAluno + 1
+    return respostaAluno
+
+def retornarMensagemFinal():
+    
+    
+alunoUmRespostas = fazerPerguntasParaAluno(alunoUmQuestoes, '1')
+alunoUmQntdRespostasCorretas = verificarRespostas(alunoUmRespostas)
+
+alunoDoisRespostas = fazerPerguntasParaAluno(alunoDoisQuestoes, '2')
+alunoDoisQntdRespostasCorretas = verificarRespostas(alunoDoisRespostas)
+
+
+    
+
+
+# aluno2 = fazerPerguntasParaAluno(alunoDoisResp, '2', indiceSegundoAluno)
+# aluno3 = fazerPerguntasParaAluno(alunoTresResp, '3', indiceTerceiroAluno)
+# aluno4 = fazerPerguntasParaAluno(alunoQuatroResp, '4', indiceQuartoAluno)
