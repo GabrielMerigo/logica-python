@@ -338,3 +338,52 @@ alunoDoisQntdRespostasCorretas = verificarRespostas(alunoDoisRespostas)
 # aluno2 = fazerPerguntasParaAluno(alunoDoisResp, '2', indiceSegundoAluno)
 # aluno3 = fazerPerguntasParaAluno(alunoTresResp, '3', indiceTerceiroAluno)
 # aluno4 = fazerPerguntasParaAluno(alunoQuatroResp, '4', indiceQuartoAluno)
+
+'''
+#Faça um programa que receba a temperatura média de cada mês do
+# ano e armazene-as em uma lista. 
+# Após isto, calcule a média anual
+# das temperaturas e mostre todas as temperaturas acima da média
+# anual, e em que mês elas ocorreram
+# (mostrar o mês por extenso: 1 – Janeiro, 2 – Fevereiro, . . . ).
+
+meses = [
+    'Janeiro',
+    'Fevereiro',
+    'Março',
+    'Abril',
+    'Maio',
+    'Junho',
+    'Julho',
+    'Agosto',
+    'Setembro',
+    'Outubro',
+    'Novembro',
+    'Dezembro'
+]
+
+temperaturas = []
+
+for i in range(meses.__len__()):
+    temperatura = input(f'coloque a temperatura do mes de {meses[i]}: ')
+    temperaturas.append(int(temperatura))
+media = round(sum(temperaturas) / 12, 2)
+
+
+class MesAcimaDaMedia:
+    def __init__(self):
+        self.currentMes = 0
+        self.temp = 0
+
+temperaturasAcimaDaMedia = []
+
+for i in range(temperaturas.__len__()):
+    if(temperaturas[i] > media):
+        mes = MesAcimaDaMedia()
+        mes.currentMes = meses[i]
+        mes.temp = temperaturas[i]
+        temperaturasAcimaDaMedia.append(mes)
+
+for i in range(temperaturasAcimaDaMedia.__len__()):
+    print(f'{i + 1} - Houve uma temperatura acima da média no Mês de {temperaturasAcimaDaMedia[i].currentMes} com a temperatura de {temperaturasAcimaDaMedia[i].temp}')
+'''
